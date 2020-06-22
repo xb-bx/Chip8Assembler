@@ -41,7 +41,7 @@ namespace Chip8AssemblyCompiler.Lexing
         private Token TokenizeOperation()
         {
             var res = "";
-            while (pos < code.Length && (char.IsLetter(code[pos]) || code[pos] == ':'))
+            while (pos < code.Length && (char.IsLetter(code[pos]) || code[pos] == ':' || code[pos] == '_'))
             {
                 res += code[pos];
                 pos++;
