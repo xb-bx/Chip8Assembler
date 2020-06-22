@@ -31,6 +31,15 @@ namespace Chip8AssemblyCompiler.Lexing
                     tokens.Add(new Token(TokenType.Comma, ""));
                     pos++;
                 }
+                else if (code[pos]=='#')
+                {
+                    pos++;
+                    while (code[pos] != '\n') 
+                    {
+                        pos++;
+                    }
+                    pos++;
+                }
                 else
                 {
                     pos++;
