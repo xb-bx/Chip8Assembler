@@ -248,9 +248,7 @@ namespace Chip8AssemblyCompiler.Parsing
                 }
                 else if (tokens[pos].Type == TokenType.Label)
                 {
-                    labels.Add(tokens[pos].Value, (ushort)(pos * 2 + 512));
-                    bytes.Add(0x80);
-                    bytes.Add(0x0F);
+                    labels.Add(tokens[pos].Value, (ushort)(pos * 2 + 512)); 
                     pos += 1;
                 }
                 else
